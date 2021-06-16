@@ -1,0 +1,8 @@
+window.dom = {
+    create(string){  
+        const container = document.createElement("template")
+        container.innerHTML = string.trim()     //trim可消除字符串里的空格
+        return container.content.firstChild
+    }
+}
+

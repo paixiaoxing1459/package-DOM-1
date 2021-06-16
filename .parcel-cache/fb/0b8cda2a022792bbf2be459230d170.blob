@@ -1,0 +1,6 @@
+window.dom = {
+    create: function(tagName){  //创建标签名
+        return document.createElement(tagName)
+    }
+}
+

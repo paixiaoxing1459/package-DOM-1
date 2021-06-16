@@ -1,0 +1,27 @@
+window.dom = {
+    //增
+    create(string){  
+        const container = document.createElement("template")
+        container.innerHTML = string.trim()     //trim可消除字符串里的空格
+        return container.content.firstChild
+    },
+    after(node, node2){
+        node.parentNode.insertBefore(node2, node.nextSibling)
+    },
+    before(node, node2){
+        node.parentNode.insertBefore(node2, node)
+    },
+    append(parent, node){
+        parent.appendChild(node)
+    },
+    wrap(node, parent){
+        dom.before(node, parent)    //将parent节点放在node前面
+        dom.append(parent, node)    //然后将node节点插入parent节点，原先的node消失
+    },
+
+    //删
+    remove(node){
+        node.parentNode.removeChild(node)
+    }
+}
+

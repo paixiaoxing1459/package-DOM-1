@@ -1,0 +1,6 @@
+window.dom = {
+    create(string){  
+        return document.createElement(tagName)
+    }
+}
+
